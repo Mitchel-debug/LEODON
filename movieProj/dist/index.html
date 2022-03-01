@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1ced07f882.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- CSS only -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <title>LEODON</title>
+</head>
+<body>
+    <nav class = "navbar">
+        <div class = "logo" id = "nav_header">
+            <p><a href="#">LEODON</a></p>
+        </div>
+        <form class="nav-list" role="search">
+            <svg id="idg" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-adjustments-horizontal" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="14" cy="6" r="2" />
+                    <line x1="4" y1="6" x2="12" y2="6" />
+                    <line x1="16" y1="6" x2="20" y2="6" />
+                    <circle cx="8" cy="12" r="2" />
+                    <line x1="4" y1="12" x2="6" y2="12" />
+                    <line x1="10" y1="12" x2="20" y2="12" />
+                    <circle cx="17" cy="18" r="2" />
+                    <line x1="4" y1="18" x2="15" y2="18" />
+                    <line x1="19" y1="18" x2="20" y2="18" />
+            </svg>
+            <input type="text" id="searchbar" placeholder="Search movies..">
+            <button id="search"><svg id="sdg" viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg></button>
+            <!-- Put this instead of svg<i class="fas fa-search"></i> -->
+        </form>
+        <div>
+            <ul class="nav_item">
+                <li>
+                    <a href="#"><i class="far fa-user-circle"></i></a>
+                </li>
+                <li id="user-menu">
+                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="recommended-movie">
+            <svg  xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFFFF" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <polyline points="15 6 9 12 15 18" />
+              </svg>
+            <img id="recom_image" src="background3.jpeg" alt="eternals">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFFFF" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <polyline points="9 6 15 12 9 18" />
+              </svg>
+        </div>
+        <div class="standard_movie">
+            <p>RECCOMENDED</p>
+            <div class="movies">
+                <img class="matrix" src="matrix-wallpaper.jpg" alt="">
+                <img class="matrix" src="witcher_image3.jpg" alt="">
+                <img class="matrix" src="venom_imag1.jpg" alt="">
+            </div>
+        </div>
+        <button id="modal2">Upload new Movie</button>
+        <div id="myUpload" class="upload">
+            <div class="uploadCont" id="uploadMov">
+                <div class="modCont">
+                    <span class="cancel">&times;</span>
+                </div>
+            </div>
+            <input type="file" id="namebox">
+            <button id="upload">upload Image</button>
+        </div>
+
+        <button id="myBtn">Open Modal</button>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="signup-form" class="form-box">
+                    <div class="button-box">
+                        <div id="btn"></div>
+                        <button type="button" class="toggle-btn" id="login2" onclick="login()">Sign In</button>
+                        <button type="button" class="toggle-btn" id="login3" onclick="register()">Sign Up</button>                        
+                    </div>
+                    <!-- <h1>Login</h1>
+
+                    <button type="button" id="logout">Log Out</button> -->
+                    
+                </div>
+                <div class="social-icons">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-google" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M17.788 5.108a9 9 0 1 0 3.212 6.892h-8"></path>
+                     </svg>
+                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                     </svg>
+                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"></path>
+                     </svg>
+                </div>
+                <form id="login" autocomplete="new-password" class="input-group">
+                    <input autocomplete="new-password" class="input-field" type="email" name ='' id="signup-email" placeholder="Email address" required>
+                    <input autocomplete="new-password" class='input-field' type="password" name ='' id="signup-password" placeholder="Password" required> 
+                    <input type="checkbox" class="check-box"><span>Remember Password</span>
+                    <button type="submit" id="sub_btn" class="submit-btn">Login</button>
+                </form>
+                <form id="register" autocomplete="new-password" class="input-group">
+                    <input autocomplete="new-password" type="text" class="input-field" id="user-val" placeholder="username">
+                    <input autocomplete="new-password" class="input-field" type="email" name ='' id="signup-email2" placeholder="email" required>
+                    <input autocomplete="new-password" class='input-field' type="password" name ='' id="signup-password2" placeholder="Password" required> 
+                    <input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+                    <button type="submit" id="send-btn" value="subit" class="submit-btn hello">Register</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+    <script type="text/javascript">
+function PopUp() {
+   document.getElementById('myModal').style.display = "block";
+}
+$(document).ready(function(){
+   setTimeout(function(){
+      PopUp();
+   },1000); // 5000 to load it after 5 seconds from page load
+});
+        var loginModal = document.getElementById("login");
+        var signupModal = document.getElementById("register");
+        var btnModal = document.getElementById("btn");
+        var btnModal3 = document.getElementById("login3");
+        var btnModal2 = document.getElementById("login2");
+
+        function register(){
+            loginModal.style.left = "-400px";
+            signupModal.style.left = "50px";
+            btnModal.style.left = "110px";
+        }
+        function login(){
+            loginModal.style.left = "50px";
+            signupModal.style.left = "450px";
+            btnModal.style.left = "0px";
+        }
+    </script>
+
+    <script src="bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+</html>

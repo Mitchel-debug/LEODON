@@ -1,0 +1,336 @@
+body{
+    background-color: rgb(37, 35, 35);
+    color: white;
+}
+
+#idg{
+    width: 25px;
+    height: auto;
+    padding-top: 0px;
+}
+
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+}
+
+nav{
+    overflow: hidden;
+    /* background-color: black; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.logo{
+    /* padding-right: 40px; */
+    color: white;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+.nav-list{
+    border: 1px solid rgb(37, 35, 35);
+    border-radius: 20px;
+    display: flex ;
+    background-color: rgb(138, 131, 131);
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 45%;
+}
+.nav_item{
+    display: flex;
+    /* background-color: yellow; */
+    justify-content: space-between;
+    width: 40px;
+}
+
+.nav-list, .nav_item, a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav_item, .nav-list, li {
+    list-style: none;
+}
+ 
+#searchbar{
+    all: unset;
+    font: 16px system-ui;
+    color: black;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(138, 131, 131);
+    padding: 6px 10px;
+    border-radius: 20px;
+}
+::placeholder{
+    color: white;
+    opacity: 0.7;
+}
+
+#search{
+    /* background: transparent;
+    border: none;
+    color: white;
+    text-align: center;
+    width: 30px;
+    height: 30px; */
+    all: unset;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+
+}
+#sdg{
+    color: #fff;
+    fill: currentColor;
+    /* width: 24px;
+    height: 24px; */
+    padding: 10px;
+}
+.fas, .far{
+    font-size: 17px;
+}
+
+.recommended-movie{
+    /* background-color: yellow; */
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+#recom_image{
+    position: relative;
+    object-fit: fit;
+    width: 100%;
+    height: 400px;
+}
+main{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.icon-tabler{
+    color: rgb(255, 255, 255);
+}
+.standard_movie{
+    padding-top: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+}
+.movies{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+.matrix{
+    border: 1px solid rgb(37, 35, 35);
+    border-radius: 8px;
+    width: 35%;
+    height: 160px;
+}
+
+section{
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+}
+
+section img{
+    width: 300px;
+}
+
+.modal{
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 10px; /*Location of the box*/
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.upload{
+    display: none;
+    position: fixed;
+    z-index: 1; 
+    padding-top: 10px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+.modal-content{
+    background-color: #191919;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 380px;
+    color: white;
+    height: 95%;
+    position: relative;
+    overflow: hidden;
+}
+.close {
+    color: #aaaaaa;
+    position: static;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+}
+.button-box{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px rgb(85, 156, 85);
+    border-radius: 30px;
+}
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    color: white;
+}
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #06853f,#06ff66);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.social-icons{
+    margin: 30px auto;
+    text-align: center;
+}
+.social-icons svg{
+    width: 40px;
+    height: auto;
+    margin: 0 12px;
+    background: linear-gradient(to right, #06853f,#06ff66);
+    box-shadow: 0 0 20px 0 #7f7f7f3d;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+}
+.input-group{
+    top: 230px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+    color: white;
+}
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #06853f,#06ff66);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+.check-box{
+    margin: 30px 10px 30px 0;
+}
+span{
+    color: #777;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+#login{
+    left: 50px;
+}
+#register{
+    left: 450px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px #191919 inset !important;
+        box-shadow: 0 0 0 30px #191919 inset !important;
+}
+input:-webkit-autofill{
+    -webkit-text-fill-color: white !important;
+}
+/* 
+#overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.7;
+    z-index: 100;
+    display: none;
+} */
+
+/* .cnt223 button{
+    text-decoration: none;
+}
+.popup{
+    width: 100%;
+    margin: 0 auto;
+    display:  none;
+    position: fixed;
+    z-index: 101;
+}
+.cnt223{
+    min-width: 600px;
+    width: 600px;
+    min-height: 150px;
+    margin: 100px auto;
+    background: #f3f3f3;
+    position: relative;
+    z-index: 103;
+    padding: 15px 35px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #000;
+}
+.cnt223 form{
+    cle
+} */
